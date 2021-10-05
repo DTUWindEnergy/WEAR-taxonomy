@@ -1,4 +1,3 @@
-@prefix activities: <http://purl.org/weave/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
@@ -16,113 +15,158 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix skosthes: <http://purl.org/iso25964/skos-thes#> .
 @prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix wear: <http://purl.org/wear/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://purl.org/weave/> a skos:Concept, skos:ConceptScheme;
-  dct:creator <https://orcid.org/0000-0002-9381-9693>, <https://orcid.org/0000-0003-4124-9040>;
-  dct:description "A classification of activities in which data are produced"@en;
+<http://purl.org/wear/> a skos:Concept, skos:ConceptScheme;
+  dct:creator <https://orcid.org/0000-0003-4124-9040>;
+  dct:description "A classification of wind turbine materials"@en;
   dct:rights <https://spdx.org/licenses/CC0-1.0>;
-  dct:title "Wind Energy ActiVitiEs (WEAVE)"@en;
+  dct:title "Wind Energy mAteRials (WEAR) Taxonomy"@en;
   pav:createdOn "2017-09-01T12:00+02:00"@en;
-  pav:lastUpdatedOn "2021-10-01T12:00+02:00"@en;
+  pav:lastUpdatedOn "2021-10-05T12:00+02:00"@en;
   pav:version "0.1.0"@en;
-  skos:hasTopConcept <http://purl.org/weave/>, activities:Measurements, activities:Modeling,
-    activities:Validation;
-  skos:inScheme <http://purl.org/weave/>;
-  skos:topConceptOf <http://purl.org/weave/> .
+  skos:hasTopConcept <http://purl.org/wear/>, wear:Blades, wear:Drivetrain, wear:Tower,
+    wear:TransformerAndInductor;
+  skos:inScheme <http://purl.org/wear/>;
+  skos:topConceptOf <http://purl.org/wear/> .
 
-activities:Measurements a skos:Concept;
-  skos:inScheme <http://purl.org/weave/>;
-  skos:narrower activities:ConditionMonitoring, activities:Fatiguetests, activities:Fieldexperiment,
-    activities:Fieldtest, activities:Fullscaletest, activities:Interviews, activities:Laboratorytest,
-    activities:Long-termmonitoring, activities:Questionnaires, activities:Statictests,
-    activities:WindTunneltest;
-  skos:prefLabel "Measurements"@en;
-  skos:topConceptOf <http://purl.org/weave/> .
+wear:Blades a skos:Concept;
+  skos:definition "A collection of terms related to materials used for the wind turbine blade production."@en;
+  skos:inScheme <http://purl.org/wear/>;
+  skos:prefLabel "Blades"@en;
+  skos:topConceptOf <http://purl.org/wear/> .
 
-activities:Modeling a skos:Concept;
-  skos:inScheme <http://purl.org/weave/>;
-  skos:prefLabel "Modeling"@en;
-  skos:topConceptOf <http://purl.org/weave/> .
+wear:Tower a skos:Concept;
+  skos:definition "A collection of terms related to materials used for the wind tower production."@en;
+  skos:inScheme <http://purl.org/wear/>;
+  skos:prefLabel "Tower"@en;
+  skos:topConceptOf <http://purl.org/wear/> .
 
-activities:Validation a skos:Concept;
-  skos:inScheme <http://purl.org/weave/>;
-  skos:narrower activities:Certification, activities:Manufacturing, activities:Reliabilityandtesting,
-    activities:Uncertaintyanalysis;
-  skos:prefLabel "Validation"@en;
-  skos:topConceptOf <http://purl.org/weave/> .
+wear:Drivetrain a skos:Concept;
+  skos:definition "A collection of terms related to materials used for the wind turbine drivetrain production."@en;
+  skos:inScheme <http://purl.org/wear/>;
+  skos:narrower wear:Aluminium, wear:Cableinsulation, wear:Castiron, wear:Concrete,
+    wear:Magnets, wear:Steel;
+  skos:prefLabel "Drivetrain"@en;
+  skos:topConceptOf <http://purl.org/wear/> .
 
-activities:Fieldexperiment a skos:Concept;
-  skos:broader activities:Measurements;
-  skos:inScheme <http://purl.org/weave/>;
-  skos:prefLabel "Field experiment"@en .
+wear:TransformerAndInductor a skos:Concept;
+  skos:definition "A collection of terms related to materials used for the wind turbine transformer and industor production."@en;
+  skos:inScheme <http://purl.org/wear/>;
+  skos:narrower wear:Aluminium;
+  skos:prefLabel "Transformer And Inductor"@en;
+  skos:topConceptOf <http://purl.org/wear/> .
 
-activities:Long-termmonitoring a skos:Concept;
-  skos:broader activities:Measurements;
-  skos:inScheme <http://purl.org/weave/>;
-  skos:prefLabel "Long-term monitoring"@en .
+wear:Compositelaminate a skos:Concept;
+  skos:broader wear:Bladesmaterials;
+  skos:inScheme <http://purl.org/wear/>;
+  skos:prefLabel "Composite laminate"@en .
 
-activities:Laboratorytest a skos:Concept;
-  skos:broader activities:Measurements;
-  skos:inScheme <http://purl.org/weave/>;
-  skos:prefLabel "Laboratory test"@en .
+wear:SandwichStructure a skos:Concept;
+  skos:broader wear:Bladesmaterials;
+  skos:inScheme <http://purl.org/wear/>;
+  skos:prefLabel "Sandwich Structure"@en .
 
-activities:WindTunneltest a skos:Concept;
-  skos:broader activities:Measurements;
-  skos:inScheme <http://purl.org/weave/>;
-  skos:prefLabel "Wind Tunnel test"@en .
+wear:Gealcoats a skos:Concept;
+  skos:broader wear:Bladesmaterials;
+  skos:inScheme <http://purl.org/wear/>;
+  skos:prefLabel "Geal coats"@en .
 
-activities:Fieldtest a skos:Concept;
-  skos:broader activities:Measurements;
-  skos:inScheme <http://purl.org/weave/>;
-  skos:prefLabel "Field test"@en .
+wear:Steel a skos:Concept;
+  skos:broader wear:Drivetrain, wear:TowerMaterials;
+  skos:inScheme <http://purl.org/wear/>;
+  skos:prefLabel "Steel"@en .
 
-activities:Fullscaletest a skos:Concept;
-  skos:broader activities:Measurements;
-  skos:inScheme <http://purl.org/weave/>;
-  skos:prefLabel "Full scale test"@en .
+wear:Concrete a skos:Concept;
+  skos:broader wear:Drivetrain, wear:TowerMaterials;
+  skos:inScheme <http://purl.org/wear/>;
+  skos:prefLabel "Concrete"@en .
 
-activities:ConditionMonitoring a skos:Concept;
-  skos:broader activities:Measurements;
-  skos:inScheme <http://purl.org/weave/>;
-  skos:prefLabel "Condition Monitoring"@en .
+wear:Wood a skos:Concept;
+  skos:broader wear:TowerMaterials;
+  skos:inScheme <http://purl.org/wear/>;
+  skos:prefLabel "Wood"@en .
 
-activities:Fatiguetests a skos:Concept;
-  skos:broader activities:Measurements;
-  skos:inScheme <http://purl.org/weave/>;
-  skos:prefLabel "Fatigue tests"@en .
+wear:Aluminium a skos:Concept;
+  skos:broader wear:Drivetrain, wear:TransformerAndInductor;
+  skos:inScheme <http://purl.org/wear/>;
+  skos:prefLabel "Aluminium"@en .
 
-activities:Statictests a skos:Concept;
-  skos:broader activities:Measurements;
-  skos:inScheme <http://purl.org/weave/>;
-  skos:prefLabel "Static tests"@en .
+wear:Cableinsulation a skos:Concept;
+  skos:broader wear:Drivetrain;
+  skos:inScheme <http://purl.org/wear/>;
+  skos:prefLabel "Cable insulation"@en .
 
-activities:Questionnaires a skos:Concept;
-  skos:broader activities:Measurements;
-  skos:inScheme <http://purl.org/weave/>;
-  skos:prefLabel "Questionnaires"@en .
+wear:Magnets a skos:Concept;
+  skos:broader wear:Drivetrain;
+  skos:inScheme <http://purl.org/wear/>;
+  skos:prefLabel "Magnets"@en .
 
-activities:Interviews a skos:Concept;
-  skos:broader activities:Measurements;
-  skos:inScheme <http://purl.org/weave/>;
-  skos:prefLabel "Interviews"@en .
+wear:Castiron a skos:Concept;
+  skos:broader wear:Drivetrain;
+  skos:inScheme <http://purl.org/wear/>;
+  skos:prefLabel "Cast iron"@en .
 
-activities:Manufacturing a skos:Concept;
-  skos:broader activities:Validation;
-  skos:inScheme <http://purl.org/weave/>;
-  skos:prefLabel "Manufacturing"@en .
+wear:Copper a skos:Concept;
+  skos:broader wear:TransformerandInductor;
+  skos:inScheme <http://purl.org/wear/>;
+  skos:prefLabel "Copper"@en .
 
-activities:Reliabilityandtesting a skos:Concept;
-  skos:broader activities:Validation;
-  skos:inScheme <http://purl.org/weave/>;
-  skos:prefLabel "Reliability and testing"@en .
+wear:Insulation a skos:Concept;
+  skos:broader wear:TransformerandInductor;
+  skos:inScheme <http://purl.org/wear/>;
+  skos:prefLabel "Insulation"@en .
 
-activities:Certification a skos:Concept;
-  skos:broader activities:Validation;
-  skos:inScheme <http://purl.org/weave/>;
-  skos:prefLabel "Certification"@en .
+wear:Laminatedsteelsheets a skos:Concept;
+  skos:broader wear:TransformerandInductor;
+  skos:inScheme <http://purl.org/wear/>;
+  skos:prefLabel "Laminated steel sheets"@en .
 
-activities:Uncertaintyanalysis a skos:Concept;
-  skos:broader activities:Validation;
-  skos:inScheme <http://purl.org/weave/>;
-  skos:prefLabel "Uncertainty analysis"@en .
+wear:Siliconsteel a skos:Concept;
+  skos:broader wear:TransformerandInductor;
+  skos:inScheme <http://purl.org/wear/>;
+  skos:prefLabel "Silicon steel"@en .
+
+wear:Nickel-iron a skos:Concept;
+  skos:broader wear:TransformerandInductor;
+  skos:inScheme <http://purl.org/wear/>;
+  skos:prefLabel "Nickel-iron"@en .
+
+wear:Cobalt-iron a skos:Concept;
+  skos:broader wear:TransformerandInductor;
+  skos:inScheme <http://purl.org/wear/>;
+  skos:prefLabel "Cobalt-iron"@en .
+
+wear:AmorphousAlloy a skos:Concept;
+  skos:broader wear:TransformerandInductor;
+  skos:inScheme <http://purl.org/wear/>;
+  skos:prefLabel "Amorphous Alloy"@en .
+
+wear:Nanocrystalline a skos:Concept;
+  skos:broader wear:TransformerandInductor;
+  skos:inScheme <http://purl.org/wear/>;
+  skos:prefLabel "Nanocrystalline"@en .
+
+wear:Powdercore a skos:Concept;
+  skos:broader wear:TransformerandInductor;
+  skos:inScheme <http://purl.org/wear/>;
+  skos:prefLabel "Powder core"@en .
+
+wear:Powderiron a skos:Concept;
+  skos:broader wear:TransformerandInductor;
+  skos:inScheme <http://purl.org/wear/>;
+  skos:prefLabel "Powder iron"@en .
+
+wear:Ferrite a skos:Concept;
+  skos:broader wear:TransformerandInductor;
+  skos:inScheme <http://purl.org/wear/>;
+  skos:prefLabel "Ferrite"@en .
+
+wear:Bladesmaterials skos:narrower wear:Compositelaminate, wear:Gealcoats, wear:SandwichStructure .
+
+wear:TowerMaterials skos:narrower wear:Concrete, wear:Steel, wear:Wood .
+
+wear:TransformerandInductor skos:narrower wear:AmorphousAlloy, wear:Cobalt-iron, wear:Copper,
+    wear:Ferrite, wear:Insulation, wear:Laminatedsteelsheets, wear:Nanocrystalline, wear:Nickel-iron,
+    wear:Powdercore, wear:Powderiron, wear:Siliconsteel .
