@@ -34,12 +34,14 @@
 wear:Blades a skos:Concept;
   skos:definition "A collection of terms related to materials used for the wind turbine blade production."@en;
   skos:inScheme <http://purl.org/wear/>;
+  skos:narrower wear:Compositelaminate, wear:Gealcoats, wear:SandwichStructure;
   skos:prefLabel "Blades"@en;
   skos:topConceptOf <http://purl.org/wear/> .
 
 wear:Tower a skos:Concept;
   skos:definition "A collection of terms related to materials used for the wind tower production."@en;
   skos:inScheme <http://purl.org/wear/>;
+  skos:narrower wear:Concrete, wear:Steel, wear:Wood;
   skos:prefLabel "Tower"@en;
   skos:topConceptOf <http://purl.org/wear/> .
 
@@ -54,37 +56,39 @@ wear:Drivetrain a skos:Concept;
 wear:TransformerAndInductor a skos:Concept;
   skos:definition "A collection of terms related to materials used for the wind turbine transformer and industor production."@en;
   skos:inScheme <http://purl.org/wear/>;
-  skos:narrower wear:Aluminium;
+  skos:narrower wear:Aluminium, wear:AmorphousAlloy, wear:Cobalt-iron, wear:Copper,
+    wear:Ferrite, wear:Insulation, wear:Laminatedsteelsheets, wear:Nanocrystalline, wear:Nickel-iron,
+    wear:Powdercore, wear:Powderiron, wear:Siliconsteel;
   skos:prefLabel "Transformer And Inductor"@en;
   skos:topConceptOf <http://purl.org/wear/> .
 
 wear:Compositelaminate a skos:Concept;
-  skos:broader wear:Bladesmaterials;
+  skos:broader wear:Blades;
   skos:inScheme <http://purl.org/wear/>;
   skos:prefLabel "Composite laminate"@en .
 
 wear:SandwichStructure a skos:Concept;
-  skos:broader wear:Bladesmaterials;
+  skos:broader wear:Blades;
   skos:inScheme <http://purl.org/wear/>;
   skos:prefLabel "Sandwich Structure"@en .
 
 wear:Gealcoats a skos:Concept;
-  skos:broader wear:Bladesmaterials;
+  skos:broader wear:Blades;
   skos:inScheme <http://purl.org/wear/>;
   skos:prefLabel "Geal coats"@en .
 
 wear:Steel a skos:Concept;
-  skos:broader wear:Drivetrain, wear:TowerMaterials;
+  skos:broader wear:Drivetrain, wear:Tower;
   skos:inScheme <http://purl.org/wear/>;
   skos:prefLabel "Steel"@en .
 
 wear:Concrete a skos:Concept;
-  skos:broader wear:Drivetrain, wear:TowerMaterials;
+  skos:broader wear:Drivetrain, wear:Tower;
   skos:inScheme <http://purl.org/wear/>;
   skos:prefLabel "Concrete"@en .
 
 wear:Wood a skos:Concept;
-  skos:broader wear:TowerMaterials;
+  skos:broader wear:Tower;
   skos:inScheme <http://purl.org/wear/>;
   skos:prefLabel "Wood"@en .
 
@@ -109,64 +113,56 @@ wear:Castiron a skos:Concept;
   skos:prefLabel "Cast iron"@en .
 
 wear:Copper a skos:Concept;
-  skos:broader wear:TransformerandInductor;
+  skos:broader wear:TransformerAndInductor;
   skos:inScheme <http://purl.org/wear/>;
   skos:prefLabel "Copper"@en .
 
 wear:Insulation a skos:Concept;
-  skos:broader wear:TransformerandInductor;
+  skos:broader wear:TransformerAndInductor;
   skos:inScheme <http://purl.org/wear/>;
   skos:prefLabel "Insulation"@en .
 
 wear:Laminatedsteelsheets a skos:Concept;
-  skos:broader wear:TransformerandInductor;
+  skos:broader wear:TransformerAndInductor;
   skos:inScheme <http://purl.org/wear/>;
   skos:prefLabel "Laminated steel sheets"@en .
 
 wear:Siliconsteel a skos:Concept;
-  skos:broader wear:TransformerandInductor;
+  skos:broader wear:TransformerAndInductor;
   skos:inScheme <http://purl.org/wear/>;
   skos:prefLabel "Silicon steel"@en .
 
 wear:Nickel-iron a skos:Concept;
-  skos:broader wear:TransformerandInductor;
+  skos:broader wear:TransformerAndInductor;
   skos:inScheme <http://purl.org/wear/>;
   skos:prefLabel "Nickel-iron"@en .
 
 wear:Cobalt-iron a skos:Concept;
-  skos:broader wear:TransformerandInductor;
+  skos:broader wear:TransformerAndInductor;
   skos:inScheme <http://purl.org/wear/>;
   skos:prefLabel "Cobalt-iron"@en .
 
 wear:AmorphousAlloy a skos:Concept;
-  skos:broader wear:TransformerandInductor;
+  skos:broader wear:TransformerAndInductor;
   skos:inScheme <http://purl.org/wear/>;
   skos:prefLabel "Amorphous Alloy"@en .
 
 wear:Nanocrystalline a skos:Concept;
-  skos:broader wear:TransformerandInductor;
+  skos:broader wear:TransformerAndInductor;
   skos:inScheme <http://purl.org/wear/>;
   skos:prefLabel "Nanocrystalline"@en .
 
 wear:Powdercore a skos:Concept;
-  skos:broader wear:TransformerandInductor;
+  skos:broader wear:TransformerAndInductor;
   skos:inScheme <http://purl.org/wear/>;
   skos:prefLabel "Powder core"@en .
 
 wear:Powderiron a skos:Concept;
-  skos:broader wear:TransformerandInductor;
+  skos:broader wear:TransformerAndInductor;
   skos:inScheme <http://purl.org/wear/>;
   skos:prefLabel "Powder iron"@en .
 
 wear:Ferrite a skos:Concept;
-  skos:broader wear:TransformerandInductor;
+  skos:broader wear:TransformerAndInductor;
   skos:inScheme <http://purl.org/wear/>;
   skos:prefLabel "Ferrite"@en .
-
-wear:Bladesmaterials skos:narrower wear:Compositelaminate, wear:Gealcoats, wear:SandwichStructure .
-
-wear:TowerMaterials skos:narrower wear:Concrete, wear:Steel, wear:Wood .
-
-wear:TransformerandInductor skos:narrower wear:AmorphousAlloy, wear:Cobalt-iron, wear:Copper,
-    wear:Ferrite, wear:Insulation, wear:Laminatedsteelsheets, wear:Nanocrystalline, wear:Nickel-iron,
-    wear:Powdercore, wear:Powderiron, wear:Siliconsteel .

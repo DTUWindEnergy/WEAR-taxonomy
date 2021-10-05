@@ -20,27 +20,27 @@ wear:Blades,Blades,,A collection of terms related to materials used for the wind
 wear:Tower,Tower,,A collection of terms related to materials used for the wind tower production.
 wear:Drivetrain,Drivetrain,,A collection of terms related to materials used for the wind turbine drivetrain production.
 wear:TransformerAndInductor,Transformer And Inductor,,A collection of terms related to materials used for the wind turbine transformer and industor production.
-wear:Compositelaminate,Composite laminate,,,,wear:Bladesmaterials
-wear:SandwichStructure,Sandwich Structure,,,,wear:Bladesmaterials
-wear:Gealcoats,Geal coats,,,,wear:Bladesmaterials
-wear:Steel,Steel,,,,"wear:TowerMaterials, wear:Drivetrain"
-wear:Concrete,Concrete,,,,"wear:TowerMaterials, wear:Drivetrain"
-wear:Wood,Wood,,,,wear:TowerMaterials
+wear:Compositelaminate,Composite laminate,,,,wear:Blades
+wear:SandwichStructure,Sandwich Structure,,,,wear:Blades
+wear:Gealcoats,Geal coats,,,,wear:Blades
+wear:Steel,Steel,,,,"wear:Tower, wear:Drivetrain"
+wear:Concrete,Concrete,,,,"wear:Tower, wear:Drivetrain"
+wear:Wood,Wood,,,,wear:Tower
 wear:Aluminium,Aluminium,,,,"wear:Drivetrain, wear:TransformerAndInductor"
 wear:Cableinsulation,Cable insulation,,,,wear:Drivetrain
 wear:Magnets,Magnets,,,,wear:Drivetrain
 wear:Castiron,Cast iron,,,,wear:Drivetrain
-wear:Copper,Copper,,,,wear:TransformerandInductor
-wear:Insulation,Insulation,,,,wear:TransformerandInductor
-wear:Laminatedsteelsheets,Laminated steel sheets,,,,wear:TransformerandInductor
-wear:Siliconsteel,Silicon steel,,,,wear:TransformerandInductor
-wear:Nickel-iron,Nickel-iron,,,,wear:TransformerandInductor
-wear:Cobalt-iron,Cobalt-iron,,,,wear:TransformerandInductor
-wear:AmorphousAlloy,Amorphous Alloy,,,,wear:TransformerandInductor
-wear:Nanocrystalline,Nanocrystalline,,,,wear:TransformerandInductor
-wear:Powdercore,Powder core,,,,wear:TransformerandInductor
-wear:Powderiron,Powder iron,,,,wear:TransformerandInductor
-wear:Ferrite,Ferrite,,,,wear:TransformerandInductor
+wear:Copper,Copper,,,,wear:TransformerAndInductor
+wear:Insulation,Insulation,,,,wear:TransformerAndInductor
+wear:Laminatedsteelsheets,Laminated steel sheets,,,,wear:TransformerAndInductor
+wear:Siliconsteel,Silicon steel,,,,wear:TransformerAndInductor
+wear:Nickel-iron,Nickel-iron,,,,wear:TransformerAndInductor
+wear:Cobalt-iron,Cobalt-iron,,,,wear:TransformerAndInductor
+wear:AmorphousAlloy,Amorphous Alloy,,,,wear:TransformerAndInductor
+wear:Nanocrystalline,Nanocrystalline,,,,wear:TransformerAndInductor
+wear:Powdercore,Powder core,,,,wear:TransformerAndInductor
+wear:Powderiron,Powder iron,,,,wear:TransformerAndInductor
+wear:Ferrite,Ferrite,,,,wear:TransformerAndInductor
 wear:
 wear:
 wear:
